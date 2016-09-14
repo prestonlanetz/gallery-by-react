@@ -1,9 +1,14 @@
+@font-face{
+  font-family: 'icons';
+  src:url('../fonts/icons/iconfont.eot') format('embedded-opentype'),url('../fonts/icons/iconfont.woff') format('woff'),url('../fonts/icons/iconfont.ttf') format('truetype'),url('../fonts/icons/iconfont.svg') format('svg');
+}
 html,body{
   width: 100;
   height: 100%;
   color: #555;
   font-family: sans-serif;
   -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 
 }
 #app{
@@ -25,6 +30,7 @@ html,body{
   height: 100%;
   overflow:hidden;
   background-color: #fff;
+  -webkit-perspective: 1800px;
 }
 .img-figure{
   position:absolute;
@@ -37,7 +43,7 @@ html,body{
  transition: transform 0.6s ease-in-out,left .6s ease-in-out, top .6s ease-in-out;
  -webkit-perspective: 1800px;
  cursor: pointer;
- perspective: 1800px;
+ -webkit-perspective: 100px;
  transform-origin: 0 50% 0;
  transform-style: preserve-3d;
  -webkit-transform-style: preserve-3d;
@@ -70,11 +76,7 @@ html,body{
   -moz-backface-visibility:hidden; 
   -ms-backface-visibility:hidden; 
 }
-.front img{
-  
-  height: 90%;
 
-}
 .img-back{
   position: absolute;
   width: 100%;
@@ -111,4 +113,61 @@ figcaption{
   width: 100%;
   text-align: center;
 }
+.controller-unit{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  cursor:pointer;
+  background-color: #aaa;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: .8;
+  -webkit-transform: scale(.5);
+  vertical-align: middle;
+  transition: transform .6s ease-in-out,background-color .3s;
+}
+.is-center{
+  background-color: #888;
+  -webkit-transform: scale(1);
+}
+.is-center::after{
+  font-family: 'icons';
+  content: '\f000c';
+  color: #fff;
+  line-height: 30px;
+  font-size: 100%;
+  font-weight: bolder;
+
+}
+.nav-inverse{
+  -webkit-transform: rotateY(180deg);
+  -ms-transform:  rotateY(180deg);
+  -moz-transform:  rotateY(180deg);
+  transform:  rotateY(180deg);
+}
+
+
+
+
 /*ctrl --  end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
